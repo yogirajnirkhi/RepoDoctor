@@ -53,7 +53,7 @@ Local repository health analyzer. Scans Git bloat, stale branches, code clones, 
 # Presentation
 
 <details>
-<summary><h2>Click here to view all presentation slides</h2></summary>
+<summary><b><big><big><big>Click to view all presentation slides</big></big></big></b></summary>
 
 <br>
 
