@@ -50,6 +50,31 @@ Local repository health analyzer. Scans Git bloat, stale branches, code clones, 
   </table>
 </div>
 
+# Presentation
+
+<details>
+<summary><h2>Click here to view all presentation slides</h2></summary>
+
+<br>
+
+![](assets/ppt/page_1.jpg)
+![](assets/ppt/page_2.jpg)
+![](assets/ppt/page_3.jpg)
+![](assets/ppt/page_4.jpg)
+![](assets/ppt/page_5.jpg)
+![](assets/ppt/page_6.jpg)
+![](assets/ppt/page_7.jpg)
+![](assets/ppt/page_8.jpg)
+![](assets/ppt/page_9.jpg)
+![](assets/ppt/page_10.jpg)
+![](assets/ppt/page_11.jpg)
+![](assets/ppt/page_12.jpg)
+![](assets/ppt/page_13.jpg)
+![](assets/ppt/page_14.jpg)
+![](assets/ppt/page_15.jpg)
+
+</details>
+
 
 ## 1. Overview
 
