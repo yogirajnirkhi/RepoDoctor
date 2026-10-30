@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repodoctor"
+version = "0.1.0"
+description = "Local repository health analyzer: Git bloat, clones, complexity, cycles."
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.27",
+  "jinja2>=3.1",
+  "python-multipart>=0.0.9",
+  "pydantic>=2.6",
+  "tree-sitter>=0.22",
+  "tree-sitter-python",
+  "tree-sitter-go",
+  "tree-sitter-javascript",
+  "tree-sitter-typescript",
+  "tree-sitter-c",
+  "tree-sitter-cpp",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "httpx>=0.27"]
+
+[project.scripts]
+repodoctor = "repodoctor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"repodoctor.app" = ["templates/*.html", "static/**/*"]

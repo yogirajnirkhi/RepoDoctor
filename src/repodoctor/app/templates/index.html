@@ -1,0 +1,14 @@
+{% extends 'base.html' %}{% block body %}
+<div class="page-heading"><div><div class="eyebrow">Repository intelligence</div><h1>Your repositories</h1><p>A clear view of your codebase. Measured locally, backed by evidence.</p></div><div class="heading-actions"><a href="/new" class="btn btn-primary">{{icon('plus')}}New analysis</a></div></div>
+<div class="metrics">
+<div class="metric"><div class="metric-label">Recent analyses {{icon('folder')}}</div><div class="metric-value">{{scans|length}}</div><div class="metric-note">Latest 50 scans in this workspace</div></div>
+<div class="metric"><div class="metric-label">Completed {{icon('check')}}</div><div class="metric-value">{{scans|selectattr('state','equalto','COMPLETED')|list|length}}</div><div class="metric-note">Available for inspection</div></div>
+<div class="metric"><div class="metric-label">In progress {{icon('pulse')}}</div><div class="metric-value">{{scans|rejectattr('state','in',['COMPLETED','FAILED','CANCELLED'])|list|length}}</div><div class="metric-note">Queued or analyzing</div></div>
+<div class="metric"><div class="metric-label">Failed scans {{icon('alert')}}</div><div class="metric-value">{{scans|selectattr('state','equalto','FAILED')|list|length}}</div><div class="metric-note">Inspect the scan log for details</div></div>
+</div>
+<section class="panel"><div class="panel-header"><h2 class="panel-title">Analysis history <span class="badge">{{scans|length}}</span></h2><span class="small muted">Most recent first</span></div>
+{% if scans %}<div class="table-toolbar"><div class="searchbox">{{icon('search')}}<input id="scan-search" placeholder="Search repositories or scan IDs…" aria-label="Search scans"></div></div><div class="table-scroll"><table class="data" id="scan-table"><thead><tr><th>Repository</th><th>Status</th><th>Scan ID</th><th>Created</th><th></th></tr></thead><tbody>{% for s in scans %}
+<tr><td><a href="/scans/{{s['id']}}" class="path mono">{{s['target']}}</a></td><td><span class="badge badge-{{s['state']}}">{{s['state']|replace('_',' ')}}</span></td><td class="mono muted">{{s['id']}}</td><td><time data-timestamp="{{s['created_at']}}"></time></td><td><a href="/scans/{{s['id']}}" aria-label="Open scan {{s['id']}}">{{icon('arrow')}}</a></td></tr>
+{% endfor %}</tbody></table></div>{% else %}<div class="empty-state">{{icon('folder')}}<h2>Know what's inside your repository</h2><p>Start with a local path or Git URL. Get a health report, structural analysis, and actionable findings—without executing your code.</p><a href="/new" class="btn btn-primary">{{icon('plus')}}Analyze your first repository</a></div>{% endif %}
+<div class="panel-footer"><span>Results persist in your local SQLite database.</span><span>No cloud upload</span></div></section>
+{% endblock %}
