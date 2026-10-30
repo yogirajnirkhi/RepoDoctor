@@ -2,6 +2,55 @@
 Local repository health analyzer. Scans Git bloat, stale branches, code clones, cyclomatic complexity, dependency cycles, and repository footprint without executing repository code.
 
 
+<div align="center">
+  <table border="0" cellpadding="10" cellspacing="0">
+    <tr>
+      <td align="center" valign="middle">
+        <a href="https://github.com/user-attachments/assets/2fdb1137-6874-40f8-a08e-ca0c8585ea03" target="_blank">
+          <img src="https://github.com/user-attachments/assets/2fdb1137-6874-40f8-a08e-ca0c8585ea03" alt="Image 1" height="300" />
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://github.com/user-attachments/assets/ec0dd0e4-e13f-43f4-b2f8-5b4d7b178bb9" target="_blank">
+          <img src="https://github.com/user-attachments/assets/ec0dd0e4-e13f-43f4-b2f8-5b4d7b178bb9" alt="Image 2" height="300" />
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle">
+        <a href="https://github.com/user-attachments/assets/9d1c4789-4952-41bb-908a-cabb6463775f" target="_blank">
+          <img src="https://github.com/user-attachments/assets/9d1c4789-4952-41bb-908a-cabb6463775f" alt="Image 3" height="300" />
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://github.com/user-attachments/assets/70a30fbd-a9de-41b0-868d-420a98900971" target="_blank">
+          <img src="https://github.com/user-attachments/assets/70a30fbd-a9de-41b0-868d-420a98900971" alt="Image 4" height="300" />
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle">
+        <a href="https://github.com/user-attachments/assets/724181cd-4155-4920-b417-187e3c00cc28" target="_blank">
+          <img src="https://github.com/user-attachments/assets/724181cd-4155-4920-b417-187e3c00cc28" alt="Image 5" height="300" />
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://github.com/user-attachments/assets/48396322-1862-4146-b0fb-4f2bc6f05b2f" target="_blank">
+          <img src="https://github.com/user-attachments/assets/48396322-1862-4146-b0fb-4f2bc6f05b2f" alt="Image 6" height="300" />
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center" valign="middle">
+        <a href="https://github.com/user-attachments/assets/45e3ed72-cd98-46d3-b873-6de567b2c2ee" target="_blank">
+          <img src="https://github.com/user-attachments/assets/45e3ed72-cd98-46d3-b873-6de567b2c2ee" alt="Image 7" height="300" />
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
 ## 1. Overview
 
 **RepoDoctor** is a local repository health analyzer. It scans Git repositories (local or remote) for code and repository health issues without ever executing repository code. It detects:
